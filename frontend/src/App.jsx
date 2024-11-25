@@ -20,6 +20,7 @@ import AddLeave from './components/leave/Add'
 import Setting from "./components/EmployeeDashboard/Setting";
 import Table from "./components/leave/Table";
 import Detail from "./components/leave/Detail";
+import Footer from "./components/Footer/footer";
 
 function App() {
   return (
@@ -97,6 +98,7 @@ function App() {
 
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
