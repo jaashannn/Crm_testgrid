@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuth } from '../../context/authContext'
+import { useAuth } from '../../context/AuthContext'
 import Email from '../Email/Email'
 import Contact from '../Contacts/Contact'
 import Leads from '../Leads/Leads'
