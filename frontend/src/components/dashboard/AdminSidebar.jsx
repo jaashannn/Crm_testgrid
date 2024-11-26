@@ -8,17 +8,18 @@ import {
   FaMoneyBillWave,
   FaTachometerAlt,
   FaUsers,
+  FaChartBar,
 } from "react-icons/fa";
 
 const AdminSidebar = () => {
   return (
     <div className="bg-gray-800 text-white h-screen fixed left-0 top-0 bottom-0 space-y-2 w-64">
       <div className="bg-teal-600 h-12 flex items-center justify-center">
-      <img 
-        src={logo} 
-        alt="Testgrid.io" 
-        className="h-8 w-8"
-      />
+        <img
+          src={logo}
+          alt="Testgrid.io"
+          className="h-8 w-8"
+        />
       </div>
       <div className="px-4">
         <NavLink
@@ -33,6 +34,16 @@ const AdminSidebar = () => {
           <span>Dashboard</span>
         </NavLink>
         <NavLink
+          to="/admin-dashboard/Leads"
+          className={({ isActive }) =>
+            `${isActive ? "bg-teal-500 " : " "
+            } flex items-center space-x-4 block py-2.5 px-4 rounded`
+          }
+        >
+          <FaChartBar />
+          <span>Leads</span>
+        </NavLink>
+        <NavLink
           to="/admin-dashboard/employees"
           className={({ isActive }) =>
             `${isActive ? "bg-teal-500 " : " "
@@ -41,6 +52,16 @@ const AdminSidebar = () => {
         >
           <FaUsers />
           <span>Employee</span>
+        </NavLink>
+        <NavLink
+          to="/admin-dashboard/contacts"
+          className={({ isActive }) =>
+            `${isActive ? "bg-teal-500 " : " "
+            } flex items-center space-x-4 block py-2.5 px-4 rounded`
+          }
+        >
+          <FaUsers />
+          <span>Contacts</span>
         </NavLink>
         <NavLink
           to="/admin-dashboard/departments"
