@@ -10,7 +10,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import axios from 'axios'
-import { Loader } from "../Loading/Loader";
+import Loader from "../Loading/Loader";
 
 const AdminSummary = () => {
   const [summary, setSummary] = useState(null)

@@ -1,6 +1,6 @@
 import React from "react";
 import anime from './icon.png'
-const Loading = () => {
+const Loader = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <img
@@ -12,4 +12,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Loader;
