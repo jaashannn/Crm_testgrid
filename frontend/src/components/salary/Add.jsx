@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchDepartments, getEmployees } from "../../utils/EmployeeHelper";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import Loader from "../Loading/Loader";
 
 const Add = () => {
   const [salary, setSalary] = useState({
@@ -169,7 +170,7 @@ const Add = () => {
           </form>
         </div>
       ) : (
-        <div>Loading...</div>
+        <Loader />
       )}
     </>
   );

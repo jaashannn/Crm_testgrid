@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Loader from "../Loading/Loader";
 
 const Detail = () => {
   const { id } = useParams();
@@ -118,7 +119,7 @@ const Detail = () => {
           </div>
         </div>
       ) : (
-        <div> Loading ....</div>
+        <Loader />
       )}
     </>
   );

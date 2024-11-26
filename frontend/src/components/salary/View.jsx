@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
+import Loader from "../Loading/Loader";
 
 const View = () => {
   const [salaries, setSalaries] = useState(null);
@@ -42,7 +43,7 @@ const View = () => {
   return (
     <>
       {filteredSalaries === null ? (
-        <div>Loading ...</div>
+        <Loader />
       ) : (
         <div className="overflow-x-auto p-5">
           <div className="text-center">

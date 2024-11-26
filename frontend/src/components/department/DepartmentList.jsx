@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import DataTable from "react-data-table-component";
 import { columns, DepartmentButtons } from "../../utils/DepartmentHelper";
 import axios from "axios";
+import Loader from "../Loading/Loader";
 
 const DepartmentList = () => {
   const [departments, setDepartments] = useState([]);
@@ -55,7 +56,7 @@ const DepartmentList = () => {
   }
 
   return (
-    <>{depLoading ? <div>Loading ...</div> : 
+    <>{depLoading ? <Loader /> : 
     <div className="p-5">
       <div className="text-center">
         <h3 className="text-2xl font-bold">Manage Departments</h3>
